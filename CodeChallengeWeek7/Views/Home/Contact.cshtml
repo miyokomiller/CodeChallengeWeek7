@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<form method="post" action="@Url.Action("Contact", "Home")">
+    <div class="row">
+        <div class="col-xs-2">
+            <label for="FirstName">First Name: </label>
+        </div>
+        <div class="col-xs-2">
+            <input type="text" id="FirstName" name="FirstName" required />
+        </div>
+        <div class="col-xs-2">
+            <label for="LastName">Last Name: </label>
+        </div>
+        <div class="col-xs-2">
+            <input type="text" id="LastName" name="LastName" required />
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-xs-2">
+            <label for="Email">Email: </label>
+        </div>
+        <div class="col-xs-2">
+            <input type="email" id="Email" name="Email" required />
+        </div>
+        <div class="col-xs-2">
+            <label for="PhoneNum">Phone number: </label>
+        </div>
+        <div class="col-xs-2">
+            <input type="tel" id="PhoneNum" name="PhoneNum" required />
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-xs-2">
+            <label for="CompanyName">Company name: </label>
+        </div>
+        <div class="col-xs-2">
+            <input type="text" id="CompanyName" name="CompanyName" required />
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-xs-2">
+            <label for="ProjectDescription">Project Description: </label>
+        </div>
+        <div class="col-xs-2">
+            <input type="text" id="ProjectDescription" name="ProjectDescription" required />
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-xs-2">
+            <label for="TextMessage">Comment: </label>
+        </div>
+        <div class="col-xs-2">
+            <textarea id="ProjectDescription" name="TextMessage" rows="3" required></textarea>
+        </div>
+    </div>
+
+    <button id="submit" type="submit" value="Submit">Submit</button>
+</form>

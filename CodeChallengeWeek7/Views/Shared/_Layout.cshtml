@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
+
+</head>
+<body>
+    <header class="clearfix container">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="http://cdn-img.easylogo.cn/gif/51/51700.gif">
+            </div>
+            <div class="col-md-8">
+                <div class="pull-right">
+                    <nav class="navbar navbar-default">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                                <li><a href="@Url.Action("About", "Home")" id="about">About</a></li>
+                                <li><a href="@Url.Action("Work", "Home")" id="work">Work</a></li>
+                                <li><a href="@Url.Action("Careers", "Home")" id="careers">Careers</a></li>
+                                <li><a href="@Url.Action("Contact", "Home")" id="contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <hr />
+    </header>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+
+    <footer class="container">
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <p>&copy; @DateTime.Now.Year Fake Studio</p>
+            </div>
+            <div class="col-md-8">
+                <div class="pull-right">
+                    <nav class="navbar navbar-default">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                                <li><a href="@Url.Action("About", "Home")" id="about">About</a></li>
+                                <li><a href="@Url.Action("Work", "Home")" id="work">Work</a></li>
+                                <li><a href="@Url.Action("Careers", "Home")" id="careers">Careers</a></li>
+                                <li><a href="@Url.Action("Contact", "Home")" id="contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
