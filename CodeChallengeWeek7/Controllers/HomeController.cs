@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Net.Mail;
 
-namespace Week7CodeChallenge.Controllers
+namespace CodeChallengeWeek7.Controllers
 {
     public class HomeController : Controller
     {
@@ -22,27 +23,43 @@ namespace Week7CodeChallenge.Controllers
         [HttpGet]
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+           
 
-            return PartialView();
+            return PartialView( new Models.ContactsFake());
         }
+        
 
         [HttpPost]
-        public ActionResult Contact(Week7CodeChallenge.Models.ContactForms contactForm)
+        public ActionResult Contact(Models.ContactsFake contactForm)
         {
             try
             {
-                contactForm.CreationDate = DateTime.Now;
-         
+                contactForm.DateCreated = DateTime.Now.ToString();
+                
+
+                Models.ContactsFakeEntities db = new Models.ContactsFakeEntities();
+                db.ContactsFakes.Add(contactForm);
+                db.SaveChanges();
+
             }
             catch (Exception exception)
             {
+                
 
                 ViewBag.Error = exception.Message;
                 return View("Error");
             }
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress(contactForm.Email);
+                mail.To.Add("miyokomiller@gmail.com");
+                mail.Subject = "contact message form" + contactForm.FirstName;
+                mail.Body = string.Format("{0} at {1} says: {2}", contactForm.FirstName, contactForm.Email, contactForm.Comment);
 
-            return RedirectToAction("ThankYou", "Home");
+                SmtpClient SetupServer = new SmtpClient("mail.dustinkraft.com");
+                SetupServer.Port = 587;
+                SetupServer.Credentials = new System.Net.NetworkCredential("postmaster@dustinkraft.com", "techIsFun1");
+                SetupServer.Send(mail);
+               return PartialView("ThankYou");
 
         }
 
