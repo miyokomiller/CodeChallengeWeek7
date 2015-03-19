@@ -23,43 +23,38 @@ namespace CodeChallengeWeek7.Controllers
         [HttpGet]
         public ActionResult Contact()
         {
-           
 
-            return PartialView( new Models.ContactsFake());
+
+            return PartialView(new Models.ContactsFake());
         }
-        
+
 
         [HttpPost]
         public ActionResult Contact(Models.ContactsFake contactForm)
         {
-            try
-            {
+            
+            
                 contactForm.DateCreated = DateTime.Now.ToString();
-                
+
 
                 Models.ContactsFakeEntities db = new Models.ContactsFakeEntities();
                 db.ContactsFakes.Add(contactForm);
-                db.SaveChanges();
-
-            }
-            catch (Exception exception)
-            {
                 
+                return PartialView("ThankYou");
 
-                ViewBag.Error = exception.Message;
-                return View("Error");
-            }
-                MailMessage mail = new MailMessage();
-                mail.From = new MailAddress(contactForm.Email);
-                mail.To.Add("miyokomiller@gmail.com");
-                mail.Subject = "contact message form" + contactForm.FirstName;
-                mail.Body = string.Format("{0} at {1} says: {2}", contactForm.FirstName, contactForm.Email, contactForm.Comment);
+            
+            
+           // MailMessage mail = new MailMessage();
+            //mail.From = new MailAddress(contactForm.Email);
+           // mail.To.Add("miyokomiller@gmail.com");
+           // mail.Subject = "contact message form" + contactForm.FirstName;
+            //mail.Body = string.Format("{0} at {1} says: {2}", contactForm.FirstName, contactForm.Email, contactForm.Comment);
 
-                SmtpClient SetupServer = new SmtpClient("mail.dustinkraft.com");
-                SetupServer.Port = 587;
-                SetupServer.Credentials = new System.Net.NetworkCredential("postmaster@dustinkraft.com", "techIsFun1");
-                SetupServer.Send(mail);
-               return PartialView("ThankYou");
+            //SmtpClient SetupServer = new SmtpClient("mail.dustinkraft.com");
+            //SetupServer.Port = 587;
+            //SetupServer.Credentials = new System.Net.NetworkCredential("postmaster@dustinkraft.com", "techIsFun1");
+            //SetupServer.Send(mail);
+            
 
         }
 

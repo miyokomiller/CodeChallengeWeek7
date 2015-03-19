@@ -1,15 +1,21 @@
-﻿﻿@{
-    ViewBag.Title = "About";
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div id="buttons">
-    <ul class="list-inline">
-        <li><a href="@Url.Action("Who", "Home")" id="Who">Who</a></li>
-        <li><a href="@Url.Action("What", "Home")" id="What">What</a></li>
-        <li><a href="@Url.Action("Why", "Home")" id="Why">Why</a></li>
-        <li><a href="@Url.Action("How", "Home")" id="How">How</a></li>
-        <li><a href="@Url.Action("Where", "Home")" id="Where">Where</a></li>
-    </ul>
-</div>
-<div class="container about">
-    @Html.Partial("Who")
+
+
+<header>
+    <div id="about" class="btn-group" role="group" aria-label="...">
+        <ul class="list-inline">
+            <li data-url="@Url.Action("Who", "Home")" class="btn btn-default ajax-linked">Who</li>
+            <li data-url="@Url.Action("What", "Home")" class="btn btn-default ajax-linked">What</li>
+            <li data-url="@Url.Action("Why", "Home")" class="btn btn-default ajax-linked">Why</li>
+            <li data-url="@Url.Action("How", "Home")" class="btn btn-default ajax-linked">How</li>
+            <li data-url="@Url.Action("Where", "Home")" class="btn btn-default ajax-linked">Where</li>
+        </ul>
+    </div>
+</header>
+<div class="about-layout">
+    <h2>Who</h2>
+    <p>Lorem ipsum dolor sit amet, velit sententiae an qui. No habeo illum volutpat pri. Sint apeirian petentium quo no, ad tantas commodo oportere his. Sit in fierent accusata. Vitae persius in per, an mel idque dolorum. An commodo officiis quaestio sea. Unum aperiam ei vel, duo quidam persequeris in. An suas verear theophrastus his, mea ea prima scripta. Cum erat civibus te, ei modus quodsi eam. Dolor nostrum per id, sanctus gubergren ex has.</p>
+    <p>Ad est ubique graecis, at duo illud postulant. Atqui ignota invidunt pro te. Nec ei partem fierent eligendi, tota inermis elaboraret ut has, autem nonumy nec ei. Sed an elit vidit detracto, vel et duis rebum aliquando. Regione deterruisset ad ius, te mel assum suscipit sensibus. Vero lorem clita mei te. An sed vidit semper phaedrum, eu nec augue tractatos persequeris. Quidam docendi signiferumque his id, eam ceteros ocurreret ea. Ne graece feugiat argumentum eos, his duis quidam te. Dolorum epicurei dignissim ex sit, usu et patrioque urbanitas, in suscipit recteque pri.</p>
 </div>

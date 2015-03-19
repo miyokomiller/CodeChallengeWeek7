@@ -12,7 +12,6 @@
           <ScalarProperty Name="Company" ColumnName="Company" />
           <ScalarProperty Name="Project" ColumnName="Project" />
           <ScalarProperty Name="Comment" ColumnName="Comment" />
-          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

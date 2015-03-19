@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="ContactID" />
     </Key>
-    <Property Name="ContactID" Type="int" Nullable="false" />
+    <Property Name="ContactID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
@@ -12,7 +12,6 @@
     <Property Name="Company" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="Project" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Comment" Type="nvarchar" MaxLength="250" Nullable="false" />
-    <Property Name="DateCreated" Type="nvarchar" MaxLength="100" Nullable="false" />
   </EntityType>
   <EntityContainer Name="ContactsFakeModelStoreContainer">
     <EntitySet Name="ContactsFake" EntityType="Self.ContactsFake" Schema="sp6Maria" store:Type="Tables" />

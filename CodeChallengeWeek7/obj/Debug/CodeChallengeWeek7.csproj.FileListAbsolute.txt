@@ -52,7 +52,6 @@ C:\Users\Technologist SP\Documents\GitHub\Program6ClassSolutions\CodeChallengeWe
 C:\Users\Technologist SP\Documents\GitHub\Program6ClassSolutions\CodeChallengeWeek7\CodeChallengeWeek7\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Technologist SP\Documents\GitHub\Program6ClassSolutions\CodeChallengeWeek7\CodeChallengeWeek7\obj\Debug\CodeChallengeWeek7.dll
 C:\Users\Technologist SP\Documents\GitHub\Program6ClassSolutions\CodeChallengeWeek7\CodeChallengeWeek7\obj\Debug\CodeChallengeWeek7.pdb
-C:\Users\Technologist SP\Documents\GitHub\CodeChallengeWeek7\CodeChallengeWeek7\obj\Debug\CodeChallengeWeek7.csprojResolveAssemblyReference.cache
 C:\Users\Technologist SP\Documents\GitHub\CodeChallengeWeek7\CodeChallengeWeek7\bin\CodeChallengeWeek7.dll.config
 C:\Users\Technologist SP\Documents\GitHub\CodeChallengeWeek7\CodeChallengeWeek7\bin\CodeChallengeWeek7.dll
 C:\Users\Technologist SP\Documents\GitHub\CodeChallengeWeek7\CodeChallengeWeek7\bin\CodeChallengeWeek7.pdb
@@ -107,3 +106,4 @@ C:\Users\Technologist SP\Documents\GitHub\CodeChallengeWeek7\CodeChallengeWeek7\
 C:\Users\Technologist SP\Documents\GitHub\CodeChallengeWeek7\CodeChallengeWeek7\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Technologist SP\Documents\GitHub\CodeChallengeWeek7\CodeChallengeWeek7\obj\Debug\CodeChallengeWeek7.dll
 C:\Users\Technologist SP\Documents\GitHub\CodeChallengeWeek7\CodeChallengeWeek7\obj\Debug\CodeChallengeWeek7.pdb
+C:\Users\Technologist SP\Documents\GitHub\CodeChallengeWeek7\CodeChallengeWeek7\obj\Debug\CodeChallengeWeek7.csprojResolveAssemblyReference.cache
